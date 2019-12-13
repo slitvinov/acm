@@ -1,0 +1,12 @@
+real procedure Ch(n, X);
+real X;
+integer n;
+code;
+begin
+  integer n;
+  real X;
+  n := 8;
+  X := 0.7;
+  outreal(1, Ch(n, X));
+  outstring(1, "\n");
+end

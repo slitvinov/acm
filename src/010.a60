@@ -1,0 +1,21 @@
+real procedure Ch(n, X);
+comment this procedure computes the Chebyshev
+polynomial Tn(X) = cos (n X cos^(-1)(X)) for
+any give real argument X, and any order n
+by the recursion formula below;
+real X;
+integer n;
+begin
+real a, b, c;
+integer i;
+a := 1;
+b := X;
+if n = 0 then c := a else if n = 1 then
+c := b else for i := 2 step 1 until n do
+begin
+  c := 2 * X * b - a;
+  a := b;
+  b := c
+end;
+Ch := c
+end;
