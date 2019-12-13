@@ -5,8 +5,8 @@ code;
 begin
   integer n;
   real X;
-  n := 8;
-  X := 0.7;
+  ininteger(0, n);
+  inreal(0, X);
   outreal(1, Ch(n, X));
-  outstring(1, "\n");
+  outstring(1, "\n")
 end
