@@ -1,3 +1,8 @@
+# Build
+
+   (cd src && make)
+   (cd example && make)
+
 # Links
 
 - https://calgo.acm.org
