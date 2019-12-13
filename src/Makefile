@@ -8,6 +8,7 @@ L = libacm.a
 O = \
 010.o\
 011.o\
+012.o\
 
 $L: $O; ar rv $@ $O && ranlib $@
 .c.o:; $(CC) $(CFLAGS) $< -c

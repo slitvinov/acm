@@ -1,6 +1,6 @@
-real procedure He(n, X);
-comment This procedure computes the Hermite polynomial
-Hn(X) = (-1)^n * exp(X^2) * (d^n/dX^n(exp(-X^2)) for any
+real procedure La(n, X);
+comment This procedure computes the Laguerre polynomial
+Ln(X) = exp(X) * (d^n/dX^n(exp(-X)) for any
 given real argument X, and any order, n, by
 the recursion formula below;
 integer n;
@@ -9,13 +9,13 @@ begin
 real a, b, c;
 integer i;
 a := 1;
-b := 2*X;
+b := 1 - X;
 if n = 0 then c := a else if n = 1 then
 c := b else for i := 1 step 1 until n - 1 do
 begin
-  c := 2 * X * b - 2 * i * a;
+  c := (1 + 2 * i - X) * b - (i^2) * a;
   a := b;
   b := c
 end;
-He := c
+La := c
 end;

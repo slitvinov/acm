@@ -9,6 +9,7 @@ MARST = marst
 M = \
 010\
 011\
+012\
 
 all: $M
 .o:; $(LINK) $< $(MARST_LDFLAGS) $(LDFLAGS) -o $@
