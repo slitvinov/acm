@@ -1,4 +1,4 @@
-real procedure Ch(n, X);
+real procedure He(n, X);
 real X;
 integer n;
 code;
@@ -8,6 +8,6 @@ begin
   real X;
   ininteger(0, n);
   inreal(0, X);
-  outreal(1, Ch(n, X));
+  outreal(1, He(n, X));
   outstring(1, "\n")
 end

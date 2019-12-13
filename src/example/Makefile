@@ -8,6 +8,7 @@ LINK = $(CC)
 MARST = marst
 M = \
 010\
+011\
 
 all: $M
 .o:; $(LINK) $< $(MARST_LDFLAGS) $(LDFLAGS) -o $@
