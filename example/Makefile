@@ -2,7 +2,7 @@
 .SUFFIXES: .c .o .a60
 .PHONY: all lint clean
 
-MARST_LDFLAGS = -static  -L.. -lacm -lalgol -lm
+MARST_LDFLAGS = -static  -L../src -lacm -lalgol -lm
 CFLAGS = -Og -g
 LINK = $(CC)
 MARST = marst
