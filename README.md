@@ -1,7 +1,6 @@
 # Build
 
-   (cd src && make)
-   (cd example && make)
+   make
 
 # Links
 
