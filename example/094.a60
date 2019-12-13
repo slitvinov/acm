@@ -1,0 +1,21 @@
+real procedure COMBINATION(J, N, K);
+value N, K;
+integer array J;
+integer N;
+integer K;
+code;
+
+begin
+  integer K;
+  integer N;
+  ininteger(0, N);
+  ininteger(0, K);
+  begin
+    integer i;
+    integer array J[1:K];
+    for i := 1 step 1 until K do ininteger(0, J[i]);
+    COMBINATION(J, N, K);
+    for i := 1 step 1 until K do outinteger(1, J[i]);
+    outstring(1, "\n")
+  end
+end

@@ -11,7 +11,7 @@ B := 1;
 mainbody: if J[B] >= B then
 begin
   A := J[B] - B - 1;
-  comment: for L := 1 step 1 until B do J[L] := L + A;
+  for L := 1 step 1 until B do J[L] := L + A;
   goto exit
 end;
 if B = K then goto initiate;
