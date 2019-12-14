@@ -1,0 +1,26 @@
+real procedure rombergintegr(fct, lgr, rgr, ord);
+value lgr, rgr, ord;
+real lgr, rgr; integer ord; real procedure fct ;
+comment ;
+begin
+  real array t[1:ord+1];
+  real l, u, m;
+  integer f, h, j, n;
+  l := rgr - lgr;
+  t[1] := (fct(lgr) + fct(rgr))/2;
+  n := 1;
+  for h := 1 step 1 until ord do
+    begin u := 0;
+      m := l/(2*n);
+      for j := 1 step 2 until 2*n - 1 do
+        u := u + fct(lgr + j*m);
+      t[h + 1] := (u/n + t[h])/2;
+      f := 1;
+      for j := h step -1 until 1 do
+        begin f := 4*f;
+	  t[j] := t[j + 1] + (t[j+1] - t[j])/(f - 1)
+	end ;
+      n := 2 * n
+    end ;
+    rombergintegr := t[1] * l
+end;

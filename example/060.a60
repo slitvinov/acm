@@ -1,0 +1,24 @@
+real procedure rombergintegr(fct, lgr, rgr, ord);
+value lgr, rgr, ord;
+real lgr, rgr; integer ord; real procedure fct ;
+code;
+
+real procedure fct(x);
+value x;
+real x;
+begin
+  comment: fct := 1/x;
+  fct := x*x*x*x*x*x*x*x*x*x*x*x
+end;
+
+begin
+  real lgr, rgr;
+  integer ord;
+  inreal(0, lgr);
+  inreal(0, rgr);
+  ininteger(0, ord);
+  begin
+    outreal(1, rombergintegr(fct, lgr, rgr, ord));
+    outstring(1, "\n")
+  end
+end
