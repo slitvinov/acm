@@ -1,0 +1,16 @@
+real procedure EXPC(a, b, c, d);
+value a, b;
+real a, b, c, d;
+code;
+
+begin
+  real a, b, c, d;
+  inreal(0, a);
+  inreal(0, b);
+  begin
+    EXPC(a, b, c, d);
+    outreal(1, c);
+    outreal(1, d);
+    outstring(1, "\n")
+  end
+end
