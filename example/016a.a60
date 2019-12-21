@@ -7,11 +7,16 @@ real procedure INNERPRODUCT(u, v, k, s, f);
 value s, f; integer k, s, f; real u, v;
 code;
 
+procedure SOLVE(B, c, n, z, pivot, INNERPRODUCT);
+value n; array B, c, z; integer n; integer array pivot;
+real procedure INNERPRODUCT;
+code;
+
 begin
   integer n;
   ininteger(0, n);
   begin
-    real array A[1:n,1:n], b[1:n], y[1:n];
+    real array A[1:n,1:n], b[1:n], c[1:n], y[1:n], z[1:n];
     integer array pivot[1:n];
     integer i, j;
     for i := 1 step 1 until n do
@@ -19,11 +24,19 @@ begin
       inreal(0, A[i, j]);
     for i := 1 step 1 until n do
       inreal(0, b[i]);
+    for i := 1 step 1 until n do
+      inreal(0, c[i]);      
     CROUT(A, b, n, y, pivot, INNERPRODUCT);
     for i := 1 step 1 until n do
     begin
       outreal(1, y[i]);
       outstring(1, "\n")
-    end
+    end;
+    SOLVE(A, c, n, z, pivot, INNERPRODUCT);
+    for i := 1 step 1 until n do
+    begin
+      outreal(1, z[i]);
+      outstring(1, "\n")
+    end    
   end
 end
