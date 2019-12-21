@@ -14,10 +14,10 @@ M = \
 016\
 016a\
 019\
+033\
 046\
 060\
 094\
-
 
 all: $M
 .o:; $(LINK) $< $(MARST_LDFLAGS) $(LDFLAGS) -o $@

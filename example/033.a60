@@ -1,0 +1,10 @@
+real procedure Factorial(n);
+value n; integer n;
+code;
+
+begin
+  integer n;
+  ininteger(0, n);
+  outreal(1, Factorial(n));
+  outstring(1, "\n")
+end
