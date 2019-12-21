@@ -1,0 +1,10 @@
+integer procedure C(m, n);
+integer m, n;
+begin integer i, a, b ;
+      a := 1;
+      if 2 * m > n then b := n - m else
+         b := m ;
+      for i := 0 step 1 until b - 1 do
+      begin a := (n - i) * a / (i + 1) end;
+      C := a
+end;
