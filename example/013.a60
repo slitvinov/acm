@@ -1,0 +1,13 @@
+real procedure Le(n, X);
+real X;
+integer n;
+code;
+
+begin
+  integer n;
+  real X;
+  ininteger(0, n);
+  inreal(0, X);
+  outreal(1, Le(n, X));
+  outstring(1, "\n")
+end

@@ -1,0 +1,21 @@
+real procedure Le(n, X);
+comment This procedure computes the Legendre polynomial
+Pn(X) = ... for any
+given real argument X, and any order, n, by
+the recursion formula below;
+integer n;
+real X;
+begin
+real a, b, c;
+integer i;
+a := 1;
+b := X;
+if n = 0 then c := a else if n = 1 then
+c := b else for i := 1 step 1 until n - 1 do
+begin
+  c := b * X + (i/(i + 1)) * (X * b - a);
+  a := b;
+  b := c
+end;
+Le := c
+end;
