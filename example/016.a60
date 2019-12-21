@@ -1,0 +1,25 @@
+procedure CROUT(A, b, n, y, pivot, INNERPRODUCT);
+value n; array A, b, y; integer n; integer array pivot;
+real procedure INNERPRODUCT;
+code;
+
+real procedure INNERPRODUCT(u, v, k, s, f);
+value s, f; integer k, s, f; real u, v;
+code;
+
+begin
+  integer n;
+  ininteger(0, n);
+  begin
+    real array A[1:n,1:n], b[1:n], y[1:n];
+    integer array pivot[1:n];
+    integer i, j;
+    for i := 1 step 1 until n do
+    for j := 1 step 1 until n do
+      inreal(0, A[i, j]);
+    for i := 1 step 1 until n do
+      inreal(0, b[i]);
+    CROUT(A, b, n, y, pivot, INNERPRODUCT);
+    print(y)
+  end
+end

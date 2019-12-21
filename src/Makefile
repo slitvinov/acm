@@ -10,11 +10,12 @@ O = \
 011.o\
 012.o\
 013.o\
+016.o\
 046.o\
 060.o\
 094.o\
 
-$L: $O; ar rv $@ $O && ranlib $@
+$L: $O; ar r $@ $O && ranlib $@
 .c.o:; $(CC) $(CFLAGS) $< -c
 .a60.c:; $(MARST) $< -o $@
 

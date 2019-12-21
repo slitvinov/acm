@@ -5,6 +5,7 @@
 # Links
 
 - https://calgo.acm.org
+- https://calgo.acm.org/125.gz
 - https://algol60.org
 
 # License
