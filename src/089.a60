@@ -1,5 +1,4 @@
 real procedure FRESNELSIN(u) Result : (frsin);
-value u;
 real u;
 real frsin;
 begin
