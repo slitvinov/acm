@@ -15,7 +15,6 @@ begin
       x := i*(hi - lo)/n;
       outreal(1, x);
       outreal(1, FRESNELSIN(x));
-      outstring(1, " ");
       outstring(1, "\n")
   end
 end

@@ -31,5 +31,5 @@ all: $M
 .c:
 %: %.c
 
-lint:; make CFLAGS='-Wall -Wextra -g -O2'
+lint:; make CFLAGS='-Wall -Wextra -g -Og'
 clean:; rm -f $M $(M:=.o) $(M:=.c)
