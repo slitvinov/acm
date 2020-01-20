@@ -1,10 +1,10 @@
-real procedure Expint C(x); real x;
-comment ;
+real procedure Expint(x);
+real x;
 begin real y, w, z;
       if x < 1 then
       z := ((((.00107857 * x - .00976004) * x
       + .05519968) * x - .24991055) * x
-      + .99999193) * x - .57721566
+      + .99999193) * x - .57721566 - ln(x)
       else
       begin
       y := (((x + 8.5733287401) * x
@@ -14,6 +14,6 @@ begin real y, w, z;
       + 25.6329561486) * x
       + 21.0996530827) * x + 3.9584969228;
       z := exp(-x) / x * (y/w)
-      end
+      end;
       Expint := z
 end;
