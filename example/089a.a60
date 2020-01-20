@@ -1,0 +1,21 @@
+real procedure FRESNELSIN(u);
+value u;
+real u;
+code;
+
+begin
+  real lo, hi, x;
+  integer i, n;
+
+  inreal(0, lo);
+  inreal(0, hi);
+  n := 100;
+  for i := 0 step 1 until n do
+  begin
+      x := i*(hi - lo)/n;
+      outreal(1, x);
+      outreal(1, FRESNELSIN(x));
+      outstring(1, " ");
+      outstring(1, "\n")
+  end
+end
