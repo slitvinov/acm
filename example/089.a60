@@ -1,11 +1,11 @@
 real procedure FRESNELSIN(u);
+value u;
 real u;
 code;
 
 begin
   real x;
   inreal(0, x);
-  print(x);
   outreal(1, FRESNELSIN(x));
   outstring(1, "\n")
 end
