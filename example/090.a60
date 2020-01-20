@@ -1,0 +1,11 @@
+real procedure FRESNELCOS(u);
+value u;
+real u;
+code;
+
+begin
+  real x;
+  inreal(0, x);
+  outreal(1, FRESNELCOS(x));
+  outstring(1, "\n")
+end

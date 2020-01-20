@@ -20,8 +20,10 @@ M = \
 046\
 060\
 089\
+090\
 089a\
 094\
+clothoid\
 
 all: $M
 .o:; $(LINK) $< $(MARST_LDFLAGS) $(LDFLAGS) -o $@
