@@ -25,7 +25,7 @@ begin
     for i := 1 step 1 until n do
       inreal(0, b[i]);
     for i := 1 step 1 until n do
-      inreal(0, c[i]);      
+      inreal(0, c[i]);
     CROUT(A, b, n, y, pivot, INNERPRODUCT);
     for i := 1 step 1 until n do
     begin
@@ -37,6 +37,6 @@ begin
     begin
       outreal(1, z[i]);
       outstring(1, "\n")
-    end    
+    end
   end
 end
