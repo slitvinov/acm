@@ -1,0 +1,10 @@
+procedure AITKEN(x, f, n, X, F); real array x, f;
+          integer n;  real X, F;
+comment ;
+begin integer i, j, t;
+  for j := 0 step 1 until n - 1 do
+      for i := j + 1 step 1 until n do
+        f[i] := ((X - x[j]) * f [i] - (X - x [i]) * f[j])/
+                (x[i] - x[j])  end;
+           F := f[n]
+end;

@@ -1,0 +1,10 @@
+load("interpol");
+p: [ [1, 0.1], [2, 0.3], [3, -0.2] ];
+
+x0: 2.5;
+lagrange(p), x = x0, infeval;
+
+with_stdout("070.in",
+  print(length(p) - 1),
+  for s in p do printf(true, "~e ~e~%", s[1], s[2]),
+  print(x0));
