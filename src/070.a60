@@ -5,6 +5,6 @@ begin integer i, j, t;
   for j := 0 step 1 until n - 1 do
       for i := j + 1 step 1 until n do
         f[i] := ((X - x[j]) * f [i] - (X - x [i]) * f[j])/
-                (x[i] - x[j])  end;
-           F := f[n]
+                 (x[i] - x[j]) ;
+         F := f [n]
 end;
