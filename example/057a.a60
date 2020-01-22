@@ -1,0 +1,25 @@
+real procedure BERBEI (r, z);
+value r, z;
+real r, z;
+code ;
+
+begin
+  real r;
+  real z;
+  real lo;
+  real hi;
+  integer i;
+  integer n;
+  inreal(0, r);
+
+  lo := -10;
+  hi := 10;
+  n := 100;
+  for i := 0 step 1 until n do
+  begin
+    z := lo + i/n * (hi - lo);
+    outreal(1, z);
+    outreal(1, BERBEI(r, z));
+    outstring(1, "\n")
+  end
+end

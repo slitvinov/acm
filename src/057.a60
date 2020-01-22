@@ -1,0 +1,22 @@
+real procedure BERBEI (r, z);
+value r, z;
+real r, z;
+comment ;
+begin
+        real s, k, c, f, t;
+        if r = 0 then
+           s := 1
+        else
+           s := (z * z)/4;
+        k := s;
+        f := z * z;
+        f := f * f;
+        for c := 2 step 2 until 100 do
+          begin
+            if s = s + k then
+               go to gate;
+            t := (c+r) *(c+r-1);
+            k := -0.0625 * k * f/(t * t);
+            s := s + k end;
+gate: BERBEI := s
+end BERBEI;

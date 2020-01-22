@@ -1,0 +1,13 @@
+real procedure BERBEI (r, z);
+value r, z;
+real r, z;
+code ;
+
+begin
+  real r;
+  real z;
+  inreal(0, r);
+  inreal(0, z);
+  outreal(1, BERBEI(r, z));
+  outstring(1, "\n")
+end
