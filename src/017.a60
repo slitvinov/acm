@@ -1,0 +1,15 @@
+procedure tridiag(a, b, c, d) order : (n) result : (x);
+array a, b, c, d, x; integer n;
+comment ;
+begin array gamma[1 :n-1]; integer i; real y;
+               gamma [1] := -a[1]/b[1];
+	    x[1] := -d[1]/b[1];
+for	    i := 2 step 1 until n-1 do
+begin	    y := b[i] + c[i] * gamma [i - 1];
+	    gamma [i] := -a[i]/y; x[i] := -(c[i] * x[i-1]
+	      + d[i])/y end;
+	    x[n] := -(c[n] * x[n-1] + d[n])/(b[n] + c[n]
+1	      * gamma[n-1]);
+for	    i := n step -1 until 2 do
+	    x[i - 1] := x[i] * gamma [i - 1] + x[i - 1]
+end tridiag;
