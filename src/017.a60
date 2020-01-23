@@ -9,7 +9,7 @@ begin	    y := b[i] + c[i] * gamma [i - 1];
 	    gamma [i] := -a[i]/y; x[i] := -(c[i] * x[i-1]
 	      + d[i])/y end;
 	    x[n] := -(c[n] * x[n-1] + d[n])/(b[n] + c[n]
-1	      * gamma[n-1]);
+	      * gamma[n-1]);
 for	    i := n step -1 until 2 do
 	    x[i - 1] := x[i] * gamma [i - 1] + x[i - 1]
 end tridiag;
