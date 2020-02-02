@@ -1,0 +1,26 @@
+procedure tridiag(a, b, c, d) order : (n) result : (x);
+array a, b, c, d, x; integer n;
+code ;
+
+begin
+  integer n;
+  ininteger(0, n);
+  begin
+      real array a[1:n-1], b[1:n], c[2:n], d[1:n], x[1:n];
+      integer i;
+      for i := 1 step 1 until n - 1 do
+          inreal(0, a[i]);
+      for i := 1 step 1 until n do
+          inreal(0, b[i]);
+      for i := 2 step 1 until n do
+          inreal(0, c[i]);
+      for i := 1 step 1 until n do
+          inreal(0, d[i]);
+      tridiag(a, b, c, d, n, x);
+      for i := 1 step 1 until n do
+      begin
+          outreal(1, x[i]);
+          outstring(1, "\n")
+      end
+  end
+end
