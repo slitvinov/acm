@@ -1,4 +1,4 @@
-# Install mart
+# Install marst
 
    wget https://ftp.fau.de/gnu/marst/marst-2.7.tar.gz -O- | tar zxf -
    cd marst-2.7
