@@ -1,0 +1,15 @@
+boolean procedure POINT IN POLYGON (n, x, y, x0, y0);
+value n, x0, y0; integer n; array x, y; real x0, y0;
+comment if the point (x[i], y[i]) (i = 1, 2, ..., n) are - in
+this cyclic order - the vertices of a simple closed polygon and
+(x0, y0) is a point not on any side of the polygon, then the
+procedure dtermines, by setting "point in polygon" to true,
+wheter (x0, y0) lies in the interior of the polygon;
+begin integer i; boolean b;
+  x[n + 1] := x[1]; y[n + 1] := y[1]; b := true;
+  for i := 1 step 1 until n do
+    if (y0 < y[i] == y0 > y[i+1]) &
+        x0 - x[i] - (y0 - y[i])*(x[i + 1] - x[i])/(y[i + 1] - y[i]) < 0
+    then b := !b;
+  POINT IN POLYGON := !b
+end POINT IN POLYGON;
