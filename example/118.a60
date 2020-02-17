@@ -1,0 +1,18 @@
+procedure magicodd (n, x); value n; integer n; integer
+  array x;
+code;
+
+begin
+    integer n;
+    ininteger(0, n);
+    begin
+       integer i, j;
+       integer array x[1:n,1:n];
+       magicodd(n, x);
+       for i := 1 step 1 until n do
+       begin
+           for j := 1 step 1 until n do outinteger(1, x[i,j]);
+           outstring(1, "\n")
+       end
+    end
+end

@@ -23,6 +23,7 @@ O = \
 089.o\
 090.o\
 094.o\
+118.o\
 
 $L: $O; ar r $@ $O && ranlib $@
 .c.o:; $(CC) $(CFLAGS) $< -c

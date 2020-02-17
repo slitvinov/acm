@@ -1,0 +1,18 @@
+procedure magicodd (n, x); value n; integer n; integer
+  array x;
+comment for given side n the procedure generates a magic
+ square of the integers 1 - n^2. For the method of De la
+ Loubere, see M. Kraitchik, "Mathematical Recreations," p.
+ 149. n must be odd and n >= 3;
+begin integer i, j, k;
+  for i := 1 step 1 until n do
+    for j := 1 step 1 until n do x[i,j] := 0;
+  i := (n + 1) / 2; j := n;
+  for k := 1 step 1 until n * n do begin
+    if x[i,j] != 0 then begin i := i - 1; j := j - 2;
+       if i < 1 then i := i + n; if j < 1 then j := j + n end;
+    x[i, j] := k;
+    i := i + 1; if i > n then i := i - n;
+    j := j + 1; if j > n then j := j - n
+    end
+end magicodd;
