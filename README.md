@@ -1,19 +1,25 @@
-# Install marst
+<h2>Install marst</h2>
 
-   wget https://ftp.fau.de/gnu/marst/marst-2.7.tar.gz -O- | tar zxf -
-   cd marst-2.7
-   ./configure && make && make install
+<pre>
+$ wget https://ftp.fau.de/gnu/marst/marst-2.7.tar.gz -O- | tar zxf -
+$ cd marst-2.7
+$ ./configure --prefix $HOME/.local
+$ make
+$ make install
+</pre>
 
-# Build
+<h2>Build</h2>
 
-   make
+<pre>
+$ make
+</pre>
 
-# Links
+<h2>Links</h2>
 
 - https://calgo.acm.org
 - https://calgo.acm.org/125.gz
 - https://algol60.org
 
-# License
+<h2>License</h2>
 
 https://www.acm.org/publications/policies/software-copyright-notice
